@@ -6,7 +6,7 @@ BSC_RPC_URL = "https://go.getblock.io/2533214cb7b74729b4dde72c7be50247"
 CONTRACT_ADDRESS = "0x6b3722691e887BA67db49b5FAf1de509c34Dd3FA"
 ABI = json.load(open('utils/abi.json','r'))
 BOT_TOKEN = "6438227382:AAH-uVGZ42b92g51CogvNxnNIiK4eHWmjxY"
-CHAT_ID = -1002023283805
+CHAT_ID = -1002101121612
 LAUNCH_PRICE = 0.01
 
 last_run = json.load(open('utils/last_run.json', 'r'))
