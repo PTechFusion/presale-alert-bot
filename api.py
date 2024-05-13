@@ -3,8 +3,22 @@ from pydantic import BaseModel
 from utils.config import *
 
 from utils.bot import bot, create_presale_message
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+# Add a CORS middleware with the origins allowed
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://helldiver.vip"],  # Allow your front-end domain
+    allow_credentials=True,
+    allow_methods=["POST"],  # Specify the methods
+    allow_headers=["Content-Type"],  # Specify which headers are allowed
+    expose_headers=["Access-Control-Allow-Origin"],  # Ensure this header is exposed
+)
+
 
 class Transaction(BaseModel):
     Tx_Hash: str
